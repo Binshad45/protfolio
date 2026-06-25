@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Binshad | Space Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <div class="scanline"></div>
+
+  <header class="topbar">
+    <div class="brand">MISSION <span>BINSHAD</span></div>
+    <nav>
+      <button data-panel="home">Home</button>
+      <button data-panel="projects">Projects</button>
+      <button data-panel="skills">Skills</button>
+      <button data-panel="internship">Internship</button>
+      <button data-panel="contact">Contact</button>
+    </nav>
+    <button id="soundToggle" class="sound">🔊 Sound</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="badge">🚀 Portfolio Space Mission</p>
+        <h1>Hi, I'm <span>Binshad A</span></h1>
+        <h2 id="typing"></h2>
+        <p>
+          Welcome to my interactive space portfolio. Explore planets to discover my
+          skills, projects, internship experience, achievements, and contact details.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" data-panel="projects">Launch Mission</button>
+          <button class="secondary" id="downloadResume">Download Resume</button>
+        </div>
+      </div>
+
+      <div class="mission-card">
+        <h3>Mission Status</h3>
+        <div class="xp-row">
+          <span>XP</span>
+          <strong id="xp">0</strong>
+        </div>
+        <div class="bar"><div id="xpBar"></div></div>
+        <p id="level">Level 1: Visitor</p>
+        <ul id="questList">
+          <li data-quest="projects">☐ Visit Projects Planet</li>
+          <li data-quest="skills">☐ Visit Skills Lab</li>
+          <li data-quest="internship">☐ Visit Internship Station</li>
+          <li data-quest="achievements">☐ Visit Achievement Planet</li>
+          <li data-quest="contact">☐ Visit Contact Hub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="solar-system">
+      <div class="sun">BINSHAD<br><span>CORE</span></div>
+
+      <button class="planet planet-projects" data-panel="projects">
+        <span>🚀</span> Projects
+      </button>
+      <button class="planet planet-skills" data-panel="skills">
+        <span>🛠️</span> Skills
+      </button>
+      <button class="planet planet-internship" data-panel="internship">
+        <span>💼</span> Internship
+      </button>
+      <button class="planet planet-achievements" data-panel="achievements">
+        <span>🏆</span> Achievements
+      </button>
+      <button class="planet planet-contact" data-panel="contact">
+        <span>📡</span> Contact
+      </button>
+
+      <div class="orbit orbit1"></div>
+      <div class="orbit orbit2"></div>
+      <div class="orbit orbit3"></div>
+      <div class="spaceship" id="ship">🛸</div>
+    </section>
+  </main>
+
+  <aside class="panel" id="infoPanel">
+    <button class="close" id="closePanel">×</button>
+    <div id="panelContent"></div>
+  </aside>
+
+  <button class="astrobot" id="botButton">🤖 AstroBot</button>
+  <div class="bot-box" id="botBox">
+    <h3>AstroBot Assistant</h3>
+    <p>Ask about Binshad's portfolio:</p>
+    <input id="botInput" placeholder="Try: projects, skills, internship" />
+    <button id="botAsk">Ask</button>
+    <p id="botAnswer">Hello explorer! 👋</p>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
